@@ -1,0 +1,51 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+      "icon": "images/icon.png",
+      "iconSmall": "images/icon.png",
+      "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+      "en-US": {
+        "name": "Pokemon Data Custom Activity",
+        "description": "A custom activity to retrieve and store Pokemon data."
+      }
+    },
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          {
+            "type": "Text",
+            "label": "Pokemon Name",
+            "key": "pokemonName",
+            "required": true
+          }
+        ],
+        "outArguments": [],
+        "url": "https://your-custom-activity-url.com/api/execute",
+        "verb": "POST",
+        "format": "json",
+        "useJwt": true,
+        "timeout": 10000
+      }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "your-custom-extension-key"
+    },
+    "wizardSteps": [
+      {
+        "label": "Step 1",
+        "key": "step1"
+      }
+    ],
+    "schema": {
+      "arguments": {
+        "execute": {
+          "inArguments": [],
+          "outArguments": []
+        }
+      }
+    }
+  }
+  
